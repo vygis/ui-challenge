@@ -72,7 +72,7 @@ module.exports = function (grunt) {
       development: {
         files: {
           // target.css file: source.less file
-          "<%= config.app %>/styles/main.css": "<%= config.app %>/less/styles.less"
+          '<%= config.app %>/styles/main.css': '<%= config.app %>/less/styles.less'
         }
       }
     },
