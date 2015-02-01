@@ -1,14 +1,61 @@
-body {
+@column-width: 300px;
+@image-height: 150px;
+@column-height: 600px;
+@gutter-width: 15px;
+
+.homepage {
 	background-image: url('../images/background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-}
-.navbar-fixed-top{
-	.css3-opacity(@foreground-color, @opacity-low);
-	border-color: transparent;
-	.navbar-nav {
-		background-color: inherit;
+
+	.navbar-fixed-top{
+		.css3-opacity(@foreground-color, @opacity-low);
+		border-color: transparent;
+		.navbar-nav {
+			background-color: inherit;
+		}
+	}
+	.main-content {
+		text-align: center;
+		margin-top: @navbar-height;
+	}
+	.hero {
+		width: @column-width;
+		margin: @gutter-width;
+	}
+	.column {
+		img {
+			height: @image-height;
+		} 
+		position: relative;
+		color: @text-color-light;
+		width: @column-width;
+		min-height: @column-height;
+		margin: @gutter-width;
+		display:inline-block;
+		vertical-align: top;
+		.css3-opacity(@foreground-color, @opacity-low);
+		.btn {
+			width: 100%;
+			margin-bottom: @gutter-width;
+		}
+		.content {
+			text-align: left;
+			margin: @gutter-width;
+			.heading {
+
+			}
+			.section {
+				&-bottom {
+					position: absolute;
+					bottom: 0;
+					left: @gutter-width;
+					right: @gutter-width;
+				}
+			}
+		}
 	}
 }
+
