@@ -5,6 +5,7 @@
 @column-padding: 25px;
 @button-margin: 20px;
 @heading-margin: 15px;
+@spacer: 30px;
 
 .homepage {
 	background-image: url('../images/background.jpg');
@@ -13,7 +14,13 @@
 	background-attachment: fixed;
 	background-position: center;
 
+
+	.btn {
+		font-size: @font-size-large;
+		font-weight: lighter;
+	}
 	.navbar-fixed-top{
+		font-size: @font-size-large;
 		.css3-opacity(@foreground-color, @opacity-low);
 		border-color: transparent;
 		.navbar-nav {
@@ -24,9 +31,36 @@
 		text-align: center;
 		margin-top: @navbar-height;
 	}
+	.header,.footer {
+		.opacity(@opacity-high);
+		a {
+			text-decoration: underline;
+			&:hover {
+				color: @foreground-color;
+			}
+		}
+	}
+	.heading {
+		font-size: @font-size-h2;
+		margin: 0;
+	}
+	.subheading {
+		font-size: @font-size-h3;
+		margin-top: 0;
+		margin-bottom: @spacer;
+	}
 	.hero {
 		width: @column-width;
 		margin: @column-margin;
+	}
+	.logo {
+		font-size: @font-size-h1;
+	}
+	.info {
+		margin: 0;
+	}
+	.smallprint {
+		margin-top: @spacer;
 	}
 	.column {
 		img {
@@ -48,7 +82,9 @@
 			text-align: left;
 			margin: @column-padding;
 			.heading {
+				font-size: @font-size-h4;
 				margin: @heading-margin 0;
+				font-weight: lighter;
 			}
 			.section {
 				margin-bottom: @column-padding;
